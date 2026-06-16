@@ -1,0 +1,29 @@
+(ns jemo-murge-admin-frontend.events.first-level-get-config
+  (:require [ajax.core :as ajax]
+            [jemo-murge-admin-frontend.http-client :as http]
+            [jemo-murge-admin-frontend.db :refer [app-state]]
+            [reagent.cookies :as cookies]
+            [jemo-murge-admin-frontend.api-uri-maker :refer [api_uri_maker]]
+            )
+  )
+
+
+(defn first_level_get_config_handler [[ok? response]]
+  (swap! app-state assoc :banners
+         (if ok?
+           (mapv (fn [banner] (:data banner)) response)
+           []
+           )
+         ) 
+  )
+
+
+(defn first_level_get_config []
+  (let []
+    (http/ajax-request-with-headers
+     {:uri (api_uri_maker "first-lvl-get-config")
+      :method :post
+      :params {}
+      :handler first_level_get_config_handler
+      :format (ajax/json-request-format)
+      :response-format (ajax/json-response-format {:keywords? true})})))

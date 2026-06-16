@@ -1,0 +1,6 @@
+{:backend_url "https://tg-market.qq-pp.ru/{{name}}-api/api/"      ;для обращениям к бекенду
+ :admin_frontend_url "https://tg-market.qq-pp.ru/{{name}}-admin/" ;для роутов к изображениям товаров и баннеров
+ :image_path "images/"                                              ;для роутов к изображениям товаров
+ :banner_path "banners/"                                            ;для роутов к изображениям баннеров
+ :bot_name "{{sanitized}}_bot"                                      ;имя бота для формирования ссылок на товар 
+}

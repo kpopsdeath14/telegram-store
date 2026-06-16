@@ -1,0 +1,263 @@
+.ant-card .ant-card-body {
+    padding: 0px;
+}
+
+.ant-space-gap-row-small {
+    row-gap: 0px;
+}
+
+:root {
+  --font-base: "Roboto Flex", sans-serif;
+  --color-accent: #26a58a;
+  --color-border: #353535;
+  --border-hairline: 0.53px;
+  /* Skeleton shimmer speed (higher = slower) */
+  --skeleton-duration: 0.5s;
+}
+
+html,
+body,
+#app,
+* {
+    font-family: var(--font-base) !important;
+}
+
+.filter-chip {
+  height: 34px;
+  padding: 0 14px;
+  border-radius: 999px;
+  border: 1px solid #e0e0e0;
+  background: #f5f5f5;
+  color: #111111;
+  font-size: 13px;
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  appearance: none;
+  line-height: 1;
+}
+
+.filter-chip--active {
+  border-color: #111111;
+  background: #111111;
+  color: #ffffff;
+}
+
+/* Thank-you page: remove default Ant Result content box */
+.ant-result .ant-result-content {
+  margin-top: 0 !important;
+  padding: 0 !important;
+  background: transparent !important;
+}
+
+/* Ant Skeleton: tune shimmer animation speed globally */
+.ant-skeleton.ant-skeleton-active .ant-skeleton-title,
+.ant-skeleton.ant-skeleton-active .ant-skeleton-paragraph > li,
+.ant-skeleton.ant-skeleton-active .ant-skeleton-avatar,
+.ant-skeleton.ant-skeleton-active .ant-skeleton-button,
+.ant-skeleton.ant-skeleton-active .ant-skeleton-input,
+.ant-skeleton.ant-skeleton-active .ant-skeleton-image,
+.ant-skeleton.ant-skeleton-active .ant-skeleton-element .ant-skeleton-avatar,
+.ant-skeleton.ant-skeleton-active .ant-skeleton-element .ant-skeleton-button,
+.ant-skeleton.ant-skeleton-active .ant-skeleton-element .ant-skeleton-input,
+.ant-skeleton.ant-skeleton-active .ant-skeleton-element .ant-skeleton-image {
+  animation-duration: var(--skeleton-duration) !important;
+}
+
+/* iOS WKWebView: keep caret visible and avoid "white block" in inputs */
+input,
+textarea,
+select,
+.ant-input,
+.ant-input-affix-wrapper input,
+.ant-input-number input {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", system-ui, sans-serif !important;
+  font-variation-settings: normal;
+  caret-color: #111;
+  -webkit-text-fill-color: #111;
+  text-shadow: none;
+}
+
+input::placeholder,
+textarea::placeholder,
+.ant-input::placeholder,
+.ant-input-affix-wrapper input::placeholder,
+.ant-input-number input::placeholder {
+  color: #9a9a9a !important;
+  -webkit-text-fill-color: #9a9a9a !important;
+  opacity: 1;
+}
+
+.horizontal-scroll {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.horizontal-scroll::-webkit-scrollbar {
+    display: none;
+}
+
+
+
+
+.delivery-page .ant-checkbox-wrapper {
+  align-items: center !important;
+}
+
+
+.delivery-page .ant-checkbox-inner {
+  border-radius: 50% !important;
+  width: 20px !important;
+  height: 20px !important;
+  border: 2px solid #777777 !important;
+  background-color: transparent !important;
+  transition: none !important; /* Убрана анимация */
+}
+
+.delivery-page .ant-checkbox-checked .ant-checkbox-inner {
+  border: 0.5px solid #000000 !important;
+  position: relative;
+  transition: none !important; /* Убрана анимация */
+}
+
+.delivery-page .ant-checkbox-checked .ant-checkbox-inner::after {
+  content: '';
+  position: absolute;
+  width: 10px !important;
+  height: 10px !important;
+  background-color: #2cb594 !important;
+  border-radius: 50% !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  border: none !important;
+  transition: none !important;
+}
+
+.delivery-page .ant-checkbox:hover .ant-checkbox-inner {
+  border-color: #000 !important;
+  transition: none !important;
+}
+
+/* Отключённое состояние */
+.delivery-page .ant-checkbox-disabled .ant-checkbox-inner {
+  border-color: #d9d9d9 !important;
+}
+.delivery-page .ant-checkbox-disabled.ant-checkbox-checked .ant-checkbox-inner::after {
+  background-color: #d9d9d9 !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.delivery-page .ant-radio-wrapper {
+  align-items: center !important;
+  font-family: "Roboto Flex", sans-serif !important;
+  font-size: 18px !important;
+  
+}
+
+.delivery-page .ant-radio-inner {
+  position: relative;
+  width: 20px !important;
+  height: 20px !important;
+  border: 1px solid #777777 !important;
+  border-radius: 50% !important;
+  background-color: transparent !important;
+  transition: none !important;
+}
+
+.delivery-page .ant-radio-checked .ant-radio-inner {
+  border-color: #000000 !important;
+}
+
+/* Полностью перезаписываем стандартную точку Ant Design */
+.delivery-page .ant-radio-inner::after {
+  display: none !important; /* Скрываем стандартную точку */
+}
+
+/* Наша кастомная точка */
+.delivery-page .ant-radio-checked .ant-radio-inner::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  background-color: var(--color-accent);
+  border-radius: 50%;
+}
+
+/* Состояния */
+.delivery-page .ant-radio-wrapper:hover .ant-radio-inner {
+  border-color: #000 !important;
+}
+
+.delivery-page .ant-radio-disabled .ant-radio-inner {
+  border-color: #d9d9d9 !important;
+}
+
+.delivery-page .ant-radio-disabled.ant-radio-checked .ant-radio-inner::before {
+  background-color: #d9d9d9 !important;
+}
+
+.delivery-page .ant-radio-wrapper {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  font-family: "Roboto Flex", sans-serif;
+  font-size: 18px;
+  color: #000;
+}
+
+.delivery-input::placeholder {
+  color: #9a9a9a;
+}
+
+.delivery-input,
+.delivery-input:focus,
+.delivery-input.ant-input-focused {
+  border-color: #353535 !important;
+  box-shadow: none !important;
+}
+
+.delivery-input.delivery-input-error,
+.delivery-input.delivery-input-error:focus,
+.delivery-input.delivery-input-error.ant-input-focused {
+  border-color: #e03a3a !important;
+  box-shadow: none !important;
+}
+
+.price-strike {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.price-strike::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  height: 1px;
+  background: currentColor;
+  transform: translateY(-50%);
+}

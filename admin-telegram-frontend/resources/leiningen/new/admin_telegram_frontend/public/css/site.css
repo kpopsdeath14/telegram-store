@@ -1,0 +1,99 @@
+/* Larger checkbox hit area in admin lists */
+.large-checkbox {
+  padding: 10px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.large-checkbox .ant-checkbox {
+  width: 22px;
+  height: 22px;
+}
+
+.large-checkbox .ant-checkbox-input,
+.large-checkbox .ant-checkbox-inner {
+  width: 22px;
+  height: 22px;
+}
+
+.large-checkbox .ant-checkbox-inner {
+  border-radius: 6px;
+}
+
+/* Admin footer */
+.admin-footer {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 16px;
+  margin: 0 24px;
+  height: 96px;
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.12);
+  z-index: 1000;
+  box-sizing: border-box;
+}
+
+.admin-footer__count {
+  min-width: 160px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #111827;
+}
+
+.admin-footer__actions {
+  display: flex;
+  gap: 12px;
+}
+
+.admin-footer__icon-btn {
+  width: 44px;
+  min-width: 44px;
+  height: 44px;
+  padding: 0;
+  border-radius: 10px;
+  border: 2px solid #d3eaff;
+  background: #f0f7ff;
+  box-shadow: 0 4px 10px rgba(15, 23, 42, 0.08);
+}
+
+.admin-footer__icon-btn:hover {
+  background: #e7f2ff;
+  border-color: #bfdfff;
+}
+
+.admin-footer__select-slot {
+  width: 220px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.admin-footer__select-btn {
+  width: 220px;
+  height: 44px;
+  border-radius: 12px;
+  border: none;
+  background: #d3eaff;
+  color: #0f172a;
+  font-size: 16px;
+  font-weight: 600;
+  box-shadow: 0 6px 16px rgba(15, 23, 42, 0.12);
+}
+
+.admin-footer__select-btn:hover {
+  background: #bfdfff;
+}
+
+.admin-footer__select-btn[disabled],
+.admin-footer__select-btn:disabled {
+  background: #e5e7eb;
+  color: #9ca3af;
+  box-shadow: none;
+}

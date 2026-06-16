@@ -1,0 +1,7 @@
+{:backend_url "https://tg-market.qq-pp.ru/jemo-murge-admin-frontend-api/api/" ;для обращения к бекенду
+ :frontend_url "https://tg-market.qq-pp.ru/jemo-murge-admin-frontend/"        ;для URL изображений 
+ :image_path "images/"                                               ;для путей к изображениям товаров
+ :banner_path "banners/"                                             ;для путей к изображениям баннеров
+ :admin_bot_name "jemo_murge_admin_frontend_bot"                                 ;для виджета авторизации через админского бота                              
+ :project-name "jemo-murge-admin-frontend"                                          ;для надписи в хедере о том, что это за проект
+ }

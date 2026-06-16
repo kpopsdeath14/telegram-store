@@ -1,0 +1,16 @@
+.DS_Store
+
+# Secrets
+api_keys.edn
+app_state.edn
+
+# Clojure build
+target/
+.clj-kondo/.cache/
+.lsp/
+
+# ClojureScript / shadow-cljs
+.shadow-cljs/
+node_modules/
+package-lock.json
+public/js/
